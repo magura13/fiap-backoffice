@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments & Receivables</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1F355A;
+            color: white;
+        }
+        .card {
+            background-color: #2A4471;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .resource-button {
+            background-color: #2A4471;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 10px;
+            text-align: left;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .resource-button i {
+            margin-right: 10px;
+        }
+        .order-list {
+            background-color: #2A4471;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .order-list i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar with Dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1F355A;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Finance</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="balance_transactions.html">Balance & Transactions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="payments_receivables.html">Payments & Receivables</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn btn-outline-light"><i class="bi bi-bell"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Payments & Receivables Content -->
+    <div class="container mt-4">
+        <div class="row text-center mb-4">
+            <div class="col">
+                <div class="card p-3">
+                    <h6>Valor Investido</h6>
+                    <p>R$ 18900,00</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card p-3">
+                    <h6>Valor Médio das Taxas</h6>
+                    <p>19%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-3">
+            <h5>Recursos</h5>
+            <button class="resource-button">
+                <i class="bi bi-bank"></i>
+                Contas bancárias
+            </button>
+            <button class="resource-button">
+                <i class="bi bi-clock-history"></i>
+                Histórico de Transações
+            </button>
+            <button class="resource-button">
+                <i class="bi bi-cash"></i>
+                Solicitar saque
+            </button>
+        </div>
+
+        <div class="card p-3">
+            <h5>Pedidos</h5>
+            <div class="order-list">
+                <div>
+                    <i class="bi bi-cart"></i>
+                    João da Silva
+                </div>
+                <span>Número 1</span>
+            </div>
+            <div class="order-list">
+                <div>
+                    <i class="bi bi-cart"></i>
+                    José de Souza
+                </div>
+                <span>Número 1</span>
+            </div>
+            <div class="order-list">
+                <div>
+                    <i class="bi bi-cart"></i>
+                    Maria da Silva
+                </div>
+                <span>Número 1</span>
+            </div>
+            <div class="order-list">
+                <div>
+                    <i class="bi bi-cart"></i>
+                    Maria José
+                </div>
+                <span>Número 12</span>
+            </div>
+            <div class="order-list">
+                <div>
+                    <i class="bi bi-cart"></i>
+                    José Maria
+                </div>
+                <span>Número 6</span>
+            </div>
+            <div class="order-list">
+                <div>
+                    <i class="bi bi-cart"></i>
+                    Joana da Silva
+                </div>
+                <span>Número 14</span>
+            </div>
+            <div class="order-list">
+                <div>
+                    <i class="bi bi-cart"></i>
+                    Maria de Souza
+                </div>
+                <span>Número 12</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

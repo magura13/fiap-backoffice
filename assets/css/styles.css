@@ -1,0 +1,20 @@
+body {
+  background-color: #1F355A;
+}
+
+.navbar {
+  background-color: #1F355A;
+}
+
+.card {
+  background-color: #2A4471;
+  color: white;
+}
+
+.card h5 {
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 16px;
+}

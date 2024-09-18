@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1F355A;
+            color: white;
+        }
+        .card {
+            background-color: #2A4471;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .chart-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .dropdown-menu {
+            background-color: #2A4471;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1F355A;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">Finance</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="balance_transactions.html">Balance & Transactions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="payments_receivables.html">Payments & Receivables</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+                </ul>
+            </div>
+            <div>
+                <button class="btn btn-outline-light"><i class="bi bi-bell"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="chart-container">
+            <div class="card">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5>Vendas Mensais</h5>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="periodDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                            Período: 30 dias
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="periodDropdown">
+                            <li><a class="dropdown-item" href="#">30 dias</a></li>
+                            <li><a class="dropdown-item" href="#">60 dias</a></li>
+                            <li><a class="dropdown-item" href="#">90 dias</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <h3>R$ 5.000,00</h3>
+                <canvas id="monthlySalesChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('monthlySalesChart').getContext('2d');
+        const monthlySalesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Vendas mensais',
+                    data: [30, 50, 40, 80, 20, 30],
+                    backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#AA64A9', '#68EBC1', '#EF5B5B'],
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
